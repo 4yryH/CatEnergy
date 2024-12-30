@@ -189,34 +189,35 @@
             <li class="field__item">
               <input
                 checked
-                class="visually-hidden"
+                class="field__input visually-hidden"
                 id="weight-loss"
                 name="target-weigth"
                 type="radio"
                 value="weight-loss"
               />
-              <label class="field__label" for="weight-loss">Похудение</label>
+              <label class="field__label field__label--radio" for="weight-loss">Похудение</label>
             </li>
             <li class="field__item">
               <input
-                class="visually-hidden"
+                class="field__input visually-hidden"
                 id="weight-gain"
                 name="target-weigth"
                 type="radio"
                 value="weight-gain"
               />
-              <label class="field__label" for="weight-gain">Набор массы</label>
+              <label class="field__label field__label--radio" for="weight-gain">Набор массы</label>
             </li>
             <li class="field__item">
               <input
-                class="visually-hidden"
+                class="field__input visually-hidden"
                 id="not-sure"
                 name="target-weigth"
                 type="radio"
                 value="not-sure"
               />
-              <label class="field__label" for="not-sure"
-                >Не определился (нужна помощь)</label
+              <label class="
+              field__label field__label--radio" for="not-sure"
+                >Не знаю (нужен ваш совет)</label
               >
             </li>
           </ul>
@@ -257,42 +258,42 @@
           <ul class="field__list">
             <li class="field__item">
               <input
-                class="field__input field__input--checkbox"
+                class="field__input visually-hidden"
                 type="checkbox"
                 name="sweetener"
                 id="sweetener"
                 checked
               />
-              <label class="field__label" for="sweetener"
+              <label class="field__label field__label--checkbox" for="sweetener"
                 >Сахарозаменитель</label
               >
             </li>
             <li class="field__item">
               <input
-                class="field__input field__input--checkbox"
+                class="field__input visually-hidden"
                 type="checkbox"
                 name="water"
                 id="water"
               />
-              <label class="field__label" for="water">Питьевая вода</label>
+              <label class="field__label field__label--checkbox" for="water">Питьевая вода</label>
             </li>
             <li class="field__item">
               <input
-                class="field__input field__input--checkbox"
+                class="field__input visually-hidden"
                 type="checkbox"
                 name="milk"
                 id="milk"
               />
-              <label class="field__label" for="milk">Молоко</label>
+              <label class="field__label field__label--checkbox" for="milk">Молоко</label>
             </li>
             <li class="field__item">
               <input
-                class="field__input field__input--checkbox"
+                class="field__input visually-hidden"
                 type="checkbox"
                 name="vitamins"
                 id="vitamins"
               />
-              <label class="field__label" for="vitamins">Витамины</label>
+              <label class="field__label field__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
@@ -301,18 +302,17 @@
           type="submit"
           value="Отправить заявку"
         />
-        <p>* — Обязательные поля</p>
+        <p class="form-main__remark">* — Обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">А вот как можно нас найти</h2>
         <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="contacts__city">Санкт-Петербург</p>
+        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <div class="page-footer__interactive-map">
-        <p>Здесь будет карта!!!</p>
+        <img src="images/location.png" alt="Мы на карте">
       </div>
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">

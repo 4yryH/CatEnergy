@@ -2,6 +2,18 @@
   font-family: @second-family;
   font-weight: 400;
   font-size: 36px;
+  padding: 27px 20px 37px 20px;
+  margin-top: 0;
+  border-top: 1px solid @special-grey-line;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    text-align: left;
+    padding-left: 70px;
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
 }
 
 .page-form-main__subtitle {
@@ -9,4 +21,14 @@
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  padding: 0px 20px 40px 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 70px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
 }

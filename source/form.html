@@ -8,8 +8,9 @@
   </head>
   <body class="page-form__body">
     <header class="page-header">
-      <a class="page-header__logo page-header__logo--link">
+      <a class="page-header__logo logo logo__page--link">
         <svg
+          class="logo__icon"
           width="35"
           height="38"
           viewBox="0 0 35 38"
@@ -69,8 +70,6 @@
             </clipPath>
           </defs>
         </svg>
-      </a>
-      <a class="page-header__logo page-header__logo--link">
         <svg
           width="102"
           height="19"
@@ -92,26 +91,32 @@
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M39.9127 1.03577H46.8674V2.88192H42.3627V8.65115H45.998V10.4204H42.3627V16.8819H46.8674V18.6512H39.8337V1.03577H39.9127Z"
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M48.9221 1.03577H50.6608L55.7977 12.6511V1.03577H57.8525V18.5742H56.2719L51.0559 6.57423V18.5742H48.9221V1.03577Z"
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M60.2234 1.03577H67.178V2.88192H62.6733V8.65115H66.3087V10.4204H62.6733V16.8819H67.178V18.6512H60.2234V1.03577Z"
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M69.2328 1.03577H72.8682C74.2982 0.939617 75.7194 1.31935 76.8987 2.11269C77.768 2.805 78.1631 4.03577 78.1631 5.65115C78.1631 7.88192 77.4519 9.26654 75.9503 9.72808L78.4793 18.4973H76.0293L73.6585 10.2665H71.6827V18.4973H69.1538V1.03577H69.2328ZM72.7101 8.57423C73.5248 8.63958 74.3369 8.42152 75.002 7.95885C75.4761 7.57423 75.7132 6.805 75.7132 5.65115C75.7351 5.07796 75.6549 4.5054 75.4761 3.95885C75.2983 3.56666 74.9928 3.2423 74.6068 3.03577C74.0625 2.79434 73.465 2.6886 72.8682 2.72808H71.7617V8.49731H72.7101V8.57423Z"
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M81.3243 17.2665C80.5028 15.9216 80.1172 14.3666 80.2179 12.805V6.95884C80.1984 5.8441 80.3313 4.73179 80.613 3.65115C80.8775 2.84362 81.4045 2.14167 82.1146 1.65115C82.997 1.14274 84.015 0.901726 85.0387 0.958841C86.6983 0.958841 87.8838 1.34346 88.595 2.18961C89.4132 3.30691 89.8046 4.66737 89.7015 6.03576V6.65115H87.3306V6.11269C87.3341 5.46845 87.2813 4.8251 87.1725 4.18961C87.1059 3.78803 86.8785 3.42848 86.5403 3.18961C86.0961 2.90582 85.5689 2.77078 85.0387 2.80499C84.472 2.76965 83.9112 2.93343 83.4581 3.26653C83.2722 3.41901 83.1203 3.60681 83.0115 3.81844C82.9028 4.03007 82.8396 4.26107 82.8259 4.4973C82.7217 5.18498 82.6689 5.87911 82.6678 6.57423V13.1127C82.6095 14.1088 82.7712 15.1056 83.142 16.0358C83.4581 16.6511 84.0903 16.8819 85.0387 16.8819C85.4131 16.9273 85.793 16.8639 86.1305 16.6997C86.468 16.5354 86.7481 16.2777 86.9354 15.9588C87.353 14.9861 87.542 13.9349 87.4886 12.8819V11.6511H85.1968V9.88192H89.7805V18.5742H88.1999L87.9628 16.5742C87.7556 17.2445 87.3242 17.8281 86.7371 18.2323C86.15 18.6365 85.4409 18.8381 84.7226 18.805C84.0696 18.8424 83.4172 18.7214 82.8241 18.4529C82.231 18.1844 81.7156 17.7767 81.3243 17.2665Z"
               fill="#111111"
             />
             <path
+              class="logo__icon--symbol"
               d="M94.8384 12.4204L90.9659 1.11269H93.3368L96.1029 9.57422L98.7899 1.11269H101.161L97.2883 12.4204V18.5742H94.9174V12.4204H94.8384Z"
               fill="#111111"
             />
@@ -128,10 +133,10 @@
           </defs>
         </svg>
       </a>
-      <button class="page-header__toggle-menu" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle-menu" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -150,101 +155,197 @@
     <main class="page-form-main">
       <h1 class="page-form-main__title">Подбор программы</h1>
       <h2 class="page-form-main__subtitle">
-        Заполните анкету, и мы подберем программу питания для вашего кота
+        Заполните анкету, и мы подберем <br />
+        программу питания для вашего кота
       </h2>
       <form
         class="page-form-main__form form-main"
         action="https://echo.htmlacademy.ru/courses"
         method="post"
       >
-        <fieldset class="form-main__basic-data field">
-          <label class="field__label" for="name">Имя:*</label>
-          <input
-            class="field__input"
-            type="text"
-            id="name"
-            name="name"
-            value="Барсик"
-          />
-          <label class="field__label" for="weight">Вес (кг)*:</label>
-          <input
-            class="field__input"
-            type="number"
-            id="weight"
-            name="weight"
-            value="7"
-          />
-          <label class="field__label" for="years-old">Возраст:</label>
-          <input
-            class="field__input"
-            type="number"
-            id="years-old"
-            name="years-old"
-            value="7"
-          />
+        <fieldset class="form-main__field field field__basic-data">
+          <div class="field__wrapper-container">
+            <label class="field__label" for="name">Имя:*</label>
+            <input
+              class="field__input"
+              type="text"
+              id="name"
+              name="name"
+              value="Барсик"
+            />
+          </div>
+          <div class="field__wrapper-container">
+            <label class="field__label" for="weight">Вес (кг)*:</label>
+            <input
+              class="field__input"
+              type="number"
+              id="weight"
+              name="weight"
+              value="7"
+            />
+          </div>
+          <div class="field__wrapper-container">
+            <label class="field__label" for="years-old">Возраст (лет):</label>
+            <input
+              class="field__input"
+              type="number"
+              id="years-old"
+              name="years-old"
+              value="7"
+            />
+          </div>
         </fieldset>
-        <fieldset class="form-main__target-data field">
+        <fieldset class="form-main__field field field__target-data">
           <legend class="field__title visually-hidden">Цель диеты:</legend>
           <ul class="field__list">
             <li class="field__item">
               <input
                 checked
-                class="field__input visually-hidden"
+                class="field__input field__input--radio visually-hidden"
                 id="weight-loss"
                 name="target-weigth"
                 type="radio"
                 value="weight-loss"
               />
-              <label class="field__label field__label--radio" for="weight-loss">Похудение</label>
+              <label class="field__label field__label--radio" for="weight-loss"
+                >Похудение</label
+              >
             </li>
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--radio visually-hidden"
                 id="weight-gain"
                 name="target-weigth"
                 type="radio"
                 value="weight-gain"
               />
-              <label class="field__label field__label--radio" for="weight-gain">Набор массы</label>
+              <label class="field__label field__label--radio" for="weight-gain"
+                >Набор массы</label
+              >
             </li>
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--radio visually-hidden"
                 id="not-sure"
                 name="target-weigth"
                 type="radio"
                 value="not-sure"
               />
-              <label class="
-              field__label field__label--radio" for="not-sure"
+              <label class="field__label field__label--radio" for="not-sure"
                 >Не знаю (нужен ваш совет)</label
               >
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-main__contact-data field">
+        <fieldset class="form-main__field field field__contact-data">
           <legend class="field__title">
-            Контактные данные (владельца кота)
+            <h4>
+              Контактные данные <br />
+              (владельца кота)
+            </h4>
           </legend>
-          <label class="field__label" for="email">E-Mail:*</label>
-          <input
-            class="field__input field__input--email"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="kuklachev@gmail.com"
-          />
-          <label class="field__label" for="tel">Телефон:*</label>
-          <input
-            class="field__input field__input--tel"
-            type="tel"
-            name="tel"
-            id="tel"
-            placeholder="8 (960) 900-60-90"
-          />
+          <div class="field__wrapper-container">
+            <label class="field__label field__label--email" for="email"
+              >E-Mail:*</label
+            >
+            <input
+              class="field__input field__input--email"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="kuklachev@gmail.com"
+            />
+            <svg
+              class="field__input--icon"
+              width="20"
+              height="15"
+              viewBox="0 0 20 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="1.65"
+                y1="5.84766"
+                x2="1.65"
+                y2="13.8477"
+                stroke="#222222"
+                stroke-width="1.3"
+              />
+              <line
+                x1="18.65"
+                y1="5.84766"
+                x2="18.65"
+                y2="13.8477"
+                stroke="#222222"
+                stroke-width="1.3"
+              />
+              <line
+                x1="1"
+                y1="13.1977"
+                x2="19"
+                y2="13.1977"
+                stroke="#222222"
+                stroke-width="1.3"
+              />
+              <line
+                x1="1"
+                y1="1.19766"
+                x2="19"
+                y2="1.19766"
+                stroke="#222222"
+                stroke-width="1.3"
+              />
+              <path
+                d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z"
+                stroke="#222222"
+                stroke-width="1.3"
+              />
+            </svg>
+          </div>
+          <div class="field__wrapper-container">
+            <label class="field__label field__label--tel" for="tel"
+              >Телефон:*</label
+            >
+            <input
+              class="field__input field__input--tel"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="8 (960) 900-60-90"
+            />
+            <svg
+              class="field__input--icon"
+              width="20"
+              height="21"
+              viewBox="0 0 20 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_153_253)">
+                <path
+                  d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z"
+                  fill="black"
+                />
+                <path
+                  d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_153_253">
+                  <rect
+                    width="20"
+                    height="20.0688"
+                    fill="white"
+                    transform="translate(0 0.320435)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
         </fieldset>
-        <fieldset class="form-main__comment field">
-          <legend class="field__title">Комментарий</legend>
+        <fieldset class="form-main__field field field__comment">
+          <legend class="field__title"><h4>Комментарий</h4></legend>
           <textarea
             class="field__input field__input--comment"
             name="comment"
@@ -253,12 +354,12 @@
             rows="5"
           ></textarea>
         </fieldset>
-        <fieldset class="form-main__additionally field">
-          <legend class="field__title">Дополнительно</legend>
-          <ul class="field__list">
+        <fieldset class="form-main__field field field__additionally">
+          <legend class="field__title"><h4>Дополнительно</h4></legend>
+          <ul class="field__list field__list--additionally">
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--checkbox visually-hidden"
                 type="checkbox"
                 name="sweetener"
                 id="sweetener"
@@ -270,30 +371,36 @@
             </li>
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--checkbox visually-hidden"
                 type="checkbox"
                 name="water"
                 id="water"
               />
-              <label class="field__label field__label--checkbox" for="water">Питьевая вода</label>
+              <label class="field__label field__label--checkbox" for="water"
+                >Питьевая вода</label
+              >
             </li>
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--checkbox visually-hidden"
                 type="checkbox"
                 name="milk"
                 id="milk"
               />
-              <label class="field__label field__label--checkbox" for="milk">Молоко</label>
+              <label class="field__label field__label--checkbox" for="milk"
+                >Молоко</label
+              >
             </li>
             <li class="field__item">
               <input
-                class="field__input visually-hidden"
+                class="field__input field__input--checkbox visually-hidden"
                 type="checkbox"
                 name="vitamins"
                 id="vitamins"
               />
-              <label class="field__label field__label--checkbox" for="vitamins">Витамины</label>
+              <label class="field__label field__label--checkbox" for="vitamins"
+                >Витамины</label
+              >
             </li>
           </ul>
         </fieldset>
@@ -305,18 +412,28 @@
         <p class="form-main__remark">* — Обязательные поля</p>
       </form>
     </main>
-    <footer class="page-footer">
-      <section class="page-footer__contacts contacts">
+    <footer class="page-footer page-footer__form">
+      <section class="page-footer__contacts contacts contacts__page-form">
         <h2 class="visually-hidden">А вот как можно нас найти</h2>
-        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <h3 class="contacts__title">
+          Приглашаем<br />к сотрудничеству дилеров!
+        </h3>
+        <p class="contacts__adress">
+          ул. Большая Конюшенная, д. 19/8
+          <span class="contacts__adress--city">Санкт-Петербург</span>
+        </p>
       </section>
       <div class="page-footer__interactive-map">
-        <img src="images/location.png" alt="Мы на карте">
+        <img
+          src="images/location.png"
+          alt="Мы на карте"
+          width="320"
+          height="362"
+        />
       </div>
       <div class="page-footer__wrapper">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo page-footer__logo--link">
+        <div class="page-footer__logo logo">
+          <a class="logo">
             <svg
               width="102"
               height="19"
@@ -399,28 +516,6 @@
             </li>
             <li class="social__item">
               <a
-                class="social__link social__link--facebook"
-                href="https://www.facebook.com/htmlacademy"
-                ><span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z"
-                    stroke="#666666"
-                    stroke-width="1.1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
                 class="social__link social__link--instagram"
                 href="https://www.instagram.com/htmlacademy"
                 ><span class="visually-hidden">Мы в Инстаграме</span>
@@ -445,16 +540,36 @@
                 </svg>
               </a>
             </li>
+            <li class="social__item">
+              <a
+                class="social__link social__link--facebook"
+                href="https://www.facebook.com/htmlacademy"
+                ><span class="visually-hidden">Мы в Фейсбуке</span>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z"
+                    stroke="#666666"
+                    stroke-width="1.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <a
             class="copyright__link"
             href="https://htmlacademy.ru/intensive/adaptive"
-            >HTML Academy</a
-          >
-          <a href="https://htmlacademy.ru/intensive/adaptive"
-            ><svg
+            ><span>HTML Academy</span>
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 60 60"
               width="27"
@@ -470,4 +585,5 @@
       </div>
     </footer>
   </body>
+  <script src="scripts/main-nav.js"></script>
 </html>

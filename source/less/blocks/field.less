@@ -1,11 +1,58 @@
 .field {
+  display: flex;
+  flex-direction: column;
   border: none;
+}
+
+.field__wrapper-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
 }
 
 .field__title {
   font-family: @second-family;
   font-weight: 400;
   font-size: 24px;
+  padding: 0 0 0 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &::after {
+    content: "";
+    height: 2px;
+    background-color: @basic-green;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  @media (min-width: @tablet-width) {
+    & br {
+      display: none;
+    }
+    &::before {
+      content: "";
+      height: 2px;
+      background-color: @basic-green;
+      width: 30px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 70px;
+    }
+  }
+}
+
+.field__title h4 {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .field__label {
@@ -14,14 +61,191 @@
   font-size: 16px;
   color: @special-dark-grey;
   text-transform: uppercase;
+  padding-left: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 70px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
+}
+
+.field__basic-data {
+  border-bottom: 1px solid @special-grey-line;
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    width: 40%;
+  }
+}
+
+.field__target-data {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid @special-grey-line;
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-right: 110px;
+    flex-grow: 1;
+    width: 40%;
+  }
+}
+
+.field__label--tel {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-left: 35px;
+  }
+}
+
+.field__list {
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    border: 1px solid @special-grey-line;
+    margin: 52px 65px 0 70px;
+    padding: 30px 30px 30px 0;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 30px;
+  }
+}
+
+.field__item {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.field__contact-data {
+  margin: 0;
+  padding-right: 0;
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.field__comment {
+  margin: 0;
+  padding-right: 0;
+}
+
+.field__additionally {
+  margin: 0;
+  padding-right: 0;
 }
 
 .field__input {
+  min-height: 45px;
   font-family: @second-family;
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
   color: @special-dark-grey;
+  flex-grow: 1;
+  margin-left: 10px;
+  padding-left: 16px;
+  margin-right: 20px;
+  border: 1px solid @special-grey-border;
+  @media (min-width: @tablet-width) {
+    margin-right: 65px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  &:hover {
+    border: 1px solid @special-grey;
+  }
+  &:focus,
+  &:focus-visible {
+    border: 2px solid @special-dark-grey;
+  }
+}
+
+.field__input--email {
+  @media (min-width: @desktop-width) {
+    min-width: 486px;
+    margin-right: 0;
+  }
+}
+
+.field__input--tel {
+  @media (min-width: @desktop-width) {
+    min-width: 472px;
+  }
+}
+
+.field__input--icon {
+  position: absolute;
+  margin-top: 15px;
+  right: 40px;
+  @media (min-width: @tablet-width) {
+    right: 85px;
+  }
+  @media (min-width: @desktop-width) {
+    position: relative;
+    right: 105px;
+  }
+}
+
+.field__input--email {
+  &:focus + .field__input--icon line,
+  &:focus + .field__input--icon path {
+    stroke: @basic-green;
+  }
+}
+
+.field__input--tel {
+  &:focus + .field__input--icon {
+    fill: @basic-green;
+    stroke: @basic-green;
+  }
+}
+
+.field__input--comment {
+  margin-left: 20px;
+  padding-top: 10px;
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+  }
+}
+
+.field__list--additionally {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & .field__item {
+      width: 40%;
+    }
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 90px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 149px;
+    display: flex;
+    justify-content: space-between;
+    & .field__item {
+      width: auto;
+    }
+  }
 }
 
 // custom input-radio
@@ -33,28 +257,58 @@
   cursor: pointer;
   user-select: none;
   margin-left: 45px;
+  margin-bottom: 12px;
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 58px;
+  }
 }
 
 .field__input + .field__label--radio::before {
   content: "";
   position: absolute;
-  left: -45px;
+  left: -20px;
   top: -4px;
   width: 30px;
   height: 30px;
   border: 1px solid @special-grey;
   border-radius: 50%;
+  @media (min-width: @tablet-width) {
+    left: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
 }
 
 .field__input:checked + .field__label--radio::after {
   content: "";
   position: absolute;
-  left: -36px;
+  left: -11px;
   top: 5px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background-color: @basic-green;
+  @media (min-width: @tablet-width) {
+    left: 29px;
+  }
+  @media (min-width: @desktop-width) {
+    left: 9px;
+  }
+}
+
+.field__input--radio + label:hover::before,
+.field__input--radio:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.field__input--radio:disabled + label::before,
+.field__input--radio:disabled + label::after,
+.field__input--radio:disabled + label {
+  opacity: 0.3;
 }
 
 // custom input-checkbox
@@ -65,26 +319,71 @@
   display: block;
   cursor: pointer;
   user-select: none;
-  margin-left: 45px;
+  margin: 12px 45px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: @desktop-width) {
+    // left: -50px;
+  }
 }
 
 .field__input + .field__label--checkbox::before {
   content: "";
   position: absolute;
-  left: -45px;
+  left: -20px;
   top: -4px;
   width: 30px;
   height: 30px;
   border: 1px solid @special-grey;
+  @media (min-width: @tablet-width) {
+    left: -35px;
+  }
 }
 
 .field__input:checked + .field__label--checkbox::after {
   content: "";
   position: absolute;
-  left: -38px;
+  left: -12px;
   top: 5px;
   width: 30px;
   height: 30px;
   background: url(../../images/checked.svg);
   background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    left: -28px;
+  }
 }
+
+.field__input--checkbox + label:hover::before,
+.field__input--checkbox:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.field__input--checkbox:disabled + label::before,
+.field__input--checkbox:disabled + label::after,
+.field__input--checkbox:disabled + label {
+  opacity: 0.3;
+}
+
+// /* ИМЯ:* */
+
+// position: absolute;
+// width: 52.42px;
+// height: 30px;
+// left: 71px;
+// top: 391px;
+
+// font-family: 'Oswald';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 20px;
+// line-height: 30px;
+// /* identical to box height */
+// text-transform: uppercase;
+
+// /* special_dark-grey */
+// color: #444444;

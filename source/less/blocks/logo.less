@@ -1,0 +1,43 @@
+.logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__page--link {
+  position: relative;
+  @media (min-width: @tablet-width) {
+    .logo__icon {
+      display: none;
+    }
+    & svg {
+      padding-left: 73px;
+    }
+    .logo__icon--symbol {
+      fill: #444;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-image: url(../../images/logo-icon-tablet.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 21px;
+      left: -4px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &::after {
+      background-image: url(../../images/logo-icon-desktop.svg);
+      top: 25px;
+      left: 19px;
+    }
+  }
+}

@@ -1,5 +1,45 @@
+.form-main {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form-main__field {
+  padding: 0;
+  width: 100%;
+}
+
 .form-main__remark {
   font-family: @font-family;
   font-weight: 400;
   font-size: 14px;
+  text-align: center;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    display: inline;
+    margin-left: 61px;
+    align-items: center;
+  }
+  @media (min-width: @tablet-width) {
+    margin-left: 81px;
+  }
+}
+
+.form-main__button {
+  display: flex;
+  width: 280px;
+  height: 40px;
+  margin: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-left: 70px;
+    width: 282px;
+    height: 52px;
+    display: inline;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    width: 568px;
+  }
 }

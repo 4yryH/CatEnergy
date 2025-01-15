@@ -1,16 +1,105 @@
 .promo {
-  background-image: url("../../images/cat-background.png");
-  background-repeat: no-repeat;
   text-align: center;
+}
+
+.promo__wrapper {
+  position: relative;
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(4, min-content);
+  }
 }
 
 .promo__title {
   font-weight: 400;
   font-size: 36px;
+  color: @basic-white;
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    color: @basic-black;
+    text-align: left;
+    margin-left: 87px;
+  }
 }
 
 .promo__slogan {
-  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  color: @basic-white;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    color: @basic-black;
+    text-align: left;
+    margin-left: 87px;
+  }
+}
+
+.promo__pic {
+  width: 280px;
+  object-fit: contain;
+  display: block;
+  justify-self: center;
+  @media (min-width: @tablet-width) {
+    width: 609px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 493px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    justify-self: left;
+    margin-left: 75px;
+    margin-bottom: 130px;
+  }
+}
+
+.promo__pic-bg {
+  width: 100%;
+  height: 302px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-image: url("../../images/cat-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(104, 183, 56, 0.85);
+  }
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    display: block;
+    background-image: url("../../images/cat-background-desktop.png");
+    background-size: contain;
+    width: 50%;
+    height: 665px;
+    top: -90px;
+    right: -30px;
+  }
+}
+
+.promo__link {
+  display: block;
+  height: 40px;
+  margin: 0 20px;
+  @media (min-width: @tablet-width) {
+    font-family: @second-family;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 0 87px;
+    width: 244px;
+    height: 54px;
+    position: absolute;
+    top: 250px;
+  }
 }

@@ -1,12 +1,12 @@
 .promo-gift {
   background: url(../../images/gift-photo-mobile.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 289px;
+  min-height: 289px;
+  margin-right: 20px;
   @media (min-resolution: 2dppx) {
     background-image: url("../../images/gift-photo-mobile@2x.png");
   }
@@ -36,11 +36,13 @@
 }
 
 .promo-gift__icon {
+  margin: 58px 40px 16px 20px;
   @media (min-width: @tablet-width) {
-    margin-left: 77px;
+    margin-left: 79px;
+    margin-top: 16px;
   }
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin: 14px 0 0 0;
   }
 }
 
@@ -48,11 +50,15 @@
   font-family: @font-family;
   font-weight: 400;
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: @basic-white;
+  margin-top: 30px;
+  margin-right: 22px;
   @media (min-width: @tablet-width) {
     text-align: left;
     margin-right: 124px;
+    margin-top: 21px;
   }
   @media (min-width: @desktop-width) {
     text-align: center;

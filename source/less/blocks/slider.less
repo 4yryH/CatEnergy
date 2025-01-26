@@ -1,0 +1,170 @@
+/* Контейнер слайдера */
+.slider {
+  position: relative;
+  width: 100%;
+  // max-width: 600px;
+  text-align: center;
+  padding-bottom: 19px;
+  @media (min-width: @tablet-width) {
+    height: 443px;
+    margin-top: 230px;
+  }
+  @media (min-width: @desktop-width) {
+    height: auto;
+  }
+}
+
+/* Контейнер изображений */
+.slider__image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  @media (min-width: @tablet-width) {
+    height: 620px;
+    position: absolute;
+    top: -187px;
+  }
+  @media (min-width: @desktop-width) {
+    top: -437px;
+    left: 85px;
+  }
+}
+
+/* Изображение "до" */
+.slider__image--before {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 311px;
+  height: 232px;
+  // clip-path: inset(0 50% 0 0);
+
+  @media (min-width: @tablet-width) {
+    clip-path: inset(0 50% 0 0);
+    top: 35px;
+    left: 45px;
+    width: 673px;
+    height: 501px;
+  }
+}
+
+/* Изображение "после" */
+.slider__image--after {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 2;
+  width: 325px;
+  height: 300px;
+  clip-path: inset(0 0 0 100%);
+  @media (min-width: @tablet-width) {
+    clip-path: inset(0 0 0 50%);
+    top: 19px;
+    left: 45px;
+    width: 673px;
+    height: 514px;
+  }
+}
+
+/* Ползунок */
+.slider__control {
+  position: absolute;
+  top: 264px;
+  left: 47%;
+  transform: translateX(-50%);
+  width: 25%;
+  z-index: 4;
+  @media (min-width: @tablet-width) {
+    width: 54%;
+    top: 367px;
+    left: 49%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 53%;
+    top: 137px;
+    left: 62.5%;
+  }
+}
+
+.slider__range {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  border-radius: 6px;
+  border: 1px solid @special-grey;
+  outline: none;
+  cursor: pointer;
+  padding-left: 6px;
+  padding-right: 6px;
+  @media (min-width: @tablet-width) {
+    background: #dcdcdc;
+    height: 6px;
+    border: none;
+  }
+}
+
+.slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 6px;
+  appearance: none;
+  cursor: pointer;
+  background-color: @basic-green;
+  border-radius: 6px;
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    background-color: @basic-green;
+    border: 13px solid @basic-white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.slider__range::-moz-range-thumb {
+  width: 34px;
+  height: 34px;
+  background: #4caf50;
+  border-radius: 50%;
+  border: 13px solid @basic-white;
+  cursor: pointer;
+}
+
+/* Метки "Было" и "Стало" */
+.slider__labels {
+  position: absolute;
+  top: 262px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 44px;
+  @media (min-width: @tablet-width) {
+    width: 74%;
+    top: 362px;
+    margin-left: 98px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 73%;
+    top: 132px;
+    margin-left: 210px;
+  }
+}
+
+.slider__label--left,
+.slider__label--right {
+  position: relative;
+}
+
+.slider__label {
+  font-family: @second-family;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    border-bottom: 1px dotted @special-grey;
+  }
+}

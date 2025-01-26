@@ -6,12 +6,18 @@
   font-family: @second-family;
   font-weight: 400;
   font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   min-width: 140px;
   max-width: 171px;
+  margin-top: 18px;
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
+    margin-top: 12px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
   }
 }
 
@@ -19,15 +25,19 @@
   font-family: @font-family;
   font-weight: 400;
   font-size: 14px;
+  line-height: 20px;
   color: @special-dark-grey;
   @media (min-width: @tablet-width) {
     text-align: right;
     max-width: 159px;
     font-size: 16px;
     line-height: 20px;
+    margin-top: 9px;
   }
   @media (min-width: @desktop-width) {
     text-align: left;
+    margin-top: 20px;
+    margin-right: 10px;
   }
 }
 

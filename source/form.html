@@ -87,7 +87,7 @@
           </div>
         </fieldset>
         <fieldset class="form-main__field field field__target-data">
-          <legend class="field__title visually-hidden">Цель диеты:</legend>
+          <legend class="visually-hidden">Цель диеты:</legend>
           <ul class="field__list">
             <li class="field__item">
               <input
@@ -129,8 +129,8 @@
           </ul>
         </fieldset>
         <fieldset class="form-main__field field field__contact-data">
-          <legend class="field__title">
-            <h4>
+          <legend class="field__title field__title--contact">
+            <h4 class="field__title-contact">
               Контактные данные <br />
               (владельца кота)
             </h4>
@@ -147,7 +147,7 @@
               placeholder="kuklachev@gmail.com"
             />
             <svg
-              class="field__input--icon"
+              class="field__input--icon field__input--icon-mail"
               width="20"
               height="15"
               stroke="#222"
@@ -166,13 +166,20 @@
               id="tel"
               placeholder="8 (960) 900-60-90"
             />
-            <svg class="field__input--icon" width="20" height="21" fill="#222">
+            <svg
+              class="field__input--icon field__input--icon-tel"
+              width="20"
+              height="21"
+              fill="#222"
+            >
               <use xlink:href="images/sprite.svg#icon-phone"></use>
             </svg>
           </div>
         </fieldset>
         <fieldset class="form-main__field field field__comment">
-          <legend class="field__title"><h4>Комментарий</h4></legend>
+          <legend class="field__title field__title--comment">
+            <h4 class="field__title-comment">Комментарий</h4>
+          </legend>
           <textarea
             class="field__input field__input--comment"
             name="comment"
@@ -182,7 +189,9 @@
           ></textarea>
         </fieldset>
         <fieldset class="form-main__field field field__additionally">
-          <legend class="field__title"><h4>Дополнительно</h4></legend>
+          <legend class="field__title field__title--additionally">
+            <h4 class="field__title-additionally">Дополнительно</h4>
+          </legend>
           <ul class="field__list field__list--additionally">
             <li class="field__item">
               <input
@@ -251,17 +260,21 @@
         </p>
       </section>
       <div class="page-footer__interactive-map">
-        <img
-          src="images/location.png"
-          alt="Мы на карте"
+        <h3 class="visually-hidden">Мы на карте</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.3726615066315!2d30.32296803791609!3d59.938752625815646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2snl!4v1737894315828!5m2!1sru!2snl"
           width="320"
           height="362"
-        />
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
           <a class="logo" href="index.html">
-            <svg width="102" height="19">
+            <svg class="logo__footer" width="102" height="19">
               <use xlink:href="images/sprite.svg#icon-logo-cat-energy"></use>
             </svg>
           </a>

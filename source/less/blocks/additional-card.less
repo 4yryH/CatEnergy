@@ -4,12 +4,19 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @special-dark-grey-2;
-  margin-bottom: 0;
+  margin: 0;
   @media (min-width: @tablet-width) {
     font-size: 20px;
   }
   @media (min-width: @desktop-width) {
     margin: 0;
+  }
+}
+
+.additional-card__header {
+  margin: 10px 0 0 2px;
+  @media (min-width: @desktop-width) {
+    margin: 5px 0 0 0;
   }
 }
 
@@ -19,6 +26,8 @@
   font-weight: 400;
   font-size: 14px;
   color: @special-dark-grey;
+  margin-top: 8px;
+  margin-bottom: 13px;
   @media (min-width: @tablet-width) {
     font-size: 16px;
   }
@@ -29,7 +38,7 @@
     margin-right: 49px;
   }
   @media (min-width: @desktop-width) {
-    margin: 0 49px 0 0;
+    margin: 0 0 0 0;
   }
 }
 
@@ -39,7 +48,7 @@
     text-align: right;
   }
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin: 0 40px 0 0;
   }
 }
 
@@ -47,7 +56,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid @special-grey;
-  padding: 20px 0;
+  padding: 0;
   &:first-child {
     border-top: 1px solid @special-grey;
   }
@@ -55,21 +64,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding: 10px 38px 10px 37px;
+    border-left: 1px solid @special-grey;
+    border-right: 1px solid @special-grey;
   }
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    grid-gap: 50px;
-    padding: 15px 0;
+    grid-template-columns: 1fr 1fr 244px;
+    padding: 13px 0 19px 0;
     align-items: center;
+    border-left: none;
+    border-right: none;
   }
 }
 
 .additional-card__wrapper {
   display: flex;
   justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+  }
 }
 
 .additional-card__footer {
@@ -83,7 +97,15 @@
 
 .additional-card__button {
   height: 40px;
+  font-size: 16px;
+  margin-bottom: 17px;
+  padding: 0;
   @media (min-width: @tablet-width) {
+    height: 39px;
     font-size: 16px;
+    margin-top: 10px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

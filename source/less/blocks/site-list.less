@@ -18,14 +18,18 @@
   text-decoration: none;
   text-transform: uppercase;
   display: block;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 18px;
+  padding-bottom: 15px;
   border-bottom: 1px solid @special-grey-border-2;
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     flex-direction: row;
     border: none;
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    padding-bottom: 0;
   }
 }
 
@@ -63,7 +67,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 6px;
         left: 0;
         height: 2px;
         background-color: @basic-green;
@@ -75,11 +79,19 @@
           content: "";
           position: absolute;
           right: 0;
-          bottom: 0;
+          bottom: 1px;
           left: 0;
           height: 2px;
           background-color: @basic-white;
         }
+      }
+    }
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 35px;
+    &--current {
+      &::after {
+        bottom: 0;
       }
     }
   }

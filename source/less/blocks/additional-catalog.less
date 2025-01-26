@@ -3,29 +3,42 @@
   font-weight: 400;
   font-size: 24px;
   width: 100%;
+  margin-top: 19px;
+  margin-bottom: 29px;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "";
+    height: 2px;
+    background-color: #68b738;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-left: 22px;
+    margin-top: 7px;
+  }
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
     font-size: 36px;
+    margin-top: 57px;
+    margin-bottom: 72px;
     &::before {
       content: "";
       height: 2px;
       background-color: #68b738;
       width: 30px;
       margin-right: 36px;
+      margin-top: 10px;
     }
     &::after {
-      content: "";
-      height: 2px;
-      background-color: #68b738;
-      flex-grow: 1;
-      flex-shrink: 0;
       margin-left: 36px;
+      margin-top: 10px;
     }
   }
   @media (min-width: @desktop-width) {
+    margin-top: 68px;
+    margin-bottom: 50px;
     &::before {
       width: 70px;
+      margin-right: 40px;
     }
   }
 }
@@ -41,6 +54,8 @@
 }
 
 .additional-catalog__list {
+  margin: 0;
+  margin-right: 20px;
   @media (min-width: @tablet-width) {
     margin: 0 30px;
   }
@@ -48,17 +63,21 @@
     width: 60%;
     margin-left: 110px;
     margin-right: 79px;
+    margin-top: 21px;
     flex-grow: 1;
   }
 }
 
 .additional-catalog__promo-gift {
+  margin-top: 39px;
+  margin-bottom: 35px;
   @media (min-width: @tablet-width) {
-    margin: 69px 30px 76px 30px;
+    margin: 68px 30px 76px 30px;
   }
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-right: 110px;
+    margin-top: 21px;
     width: 245px;
   }
 }

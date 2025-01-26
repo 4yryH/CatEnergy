@@ -8,6 +8,7 @@
   display: none;
   @media (min-width: @tablet-width) {
     display: block;
+    width: 60px;
   }
   @media (min-width: @desktop-width) {
     display: none;
@@ -22,13 +23,21 @@
 }
 
 .logo__title--header {
+  justify-self: center;
   @media (min-width: @tablet-width) {
     margin-left: 10px;
     fill: @special-dark-grey;
   }
   @media (min-width: @desktop-width) {
-    margin-left: 15px;
+    margin-left: 13px;
+    height: auto;
+    width: 118px;
   }
+}
+
+.logo__footer {
+  width: 128px;
+  height: auto;
 }
 
 .logo {

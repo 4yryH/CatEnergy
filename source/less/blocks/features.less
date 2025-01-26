@@ -1,6 +1,8 @@
 .features__list {
   margin: 0;
+  padding-bottom: 23px;
   @media (min-width: @tablet-width) {
+    margin-top: 75px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 62px;
@@ -33,7 +35,7 @@
       height: 1px;
       position: absolute;
       top: -94px;
-      right: 128px;
+      right: 131px;
       color: @basic-grey;
       font-size: 280px;
       z-index: -1;
@@ -45,14 +47,15 @@
   font-family: @second-family;
   font-weight: 400;
   font-size: 36px;
-  margin-top: 7px;
-  margin-bottom: 38px;
+  margin-top: 17px;
+  margin-bottom: 31px;
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 24px;
+    margin: 0;
   }
   @media (min-width: @desktop-width) {
-    margin-top: 51px;
+    margin-top: 89px;
     font-size: 60px;
     line-height: 24px;
   }
@@ -65,22 +68,29 @@
   line-height: 18px;
   color: @special-dark-grey;
   margin: 0 0 0 20px;
+  & br {
+    display: none;
+  }
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin: 0 0 57px 0;
+    margin: 17px 0 36px 0;
+    & br {
+      display: block;
+    }
   }
 }
 
 .features__pic {
   background-color: @basic-green;
-  padding-left: 15px;
-  padding-right: 15px;
-  // width: 60px;
-  // height: 60px;
+  padding-left: 18px;
+  padding-right: 18px;
+  width: 60px;
+  height: 60px;
   @media (min-width: @tablet-width) {
-    width: 80px;
-    height: 80px;
-    margin: 30px 0;
+    width: 33px;
+    height: auto;
+    margin: 15px 0;
+    padding: 24px 24px 23px 22px;
   }
 }

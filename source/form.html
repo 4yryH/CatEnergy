@@ -11,7 +11,7 @@
   <body class="page-form__body">
     <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
-        <svg class="logo__cat--mobile" width="35" height="38">
+        <svg class="logo__cat logo__cat--mobile" width="35" height="38">
           <use xlink:href="images/sprite.svg#icon-logo-supercat-mobile"></use>
         </svg>
         <svg class="logo__cat logo__cat--tablet" width="71" height="59">
@@ -54,7 +54,7 @@
         action="https://echo.htmlacademy.ru/courses"
         method="post"
       >
-        <fieldset class="form-main__field field field__basic-data">
+        <fieldset class="form-main__field field field--basic-data">
           <div class="field__wrapper-container">
             <label class="field__label" for="name">Имя:*</label>
             <input
@@ -86,7 +86,7 @@
             />
           </div>
         </fieldset>
-        <fieldset class="form-main__field field field__target-data">
+        <fieldset class="form-main__field field field--target-data">
           <legend class="visually-hidden">Цель диеты:</legend>
           <ul class="field__list">
             <li class="field__item">
@@ -128,7 +128,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-main__field field field__contact-data">
+        <fieldset class="form-main__field field field--contact-data">
           <legend class="field__title field__title--contact">
             <h4 class="field__title-contact">
               Контактные данные <br />
@@ -147,7 +147,7 @@
               placeholder="kuklachev@gmail.com"
             />
             <svg
-              class="field__input--icon field__input--icon-mail"
+              class="field__icon field__icon--mail"
               width="20"
               height="15"
               stroke="#222"
@@ -167,7 +167,7 @@
               placeholder="8 (960) 900-60-90"
             />
             <svg
-              class="field__input--icon field__input--icon-tel"
+              class="field__icon field__icon--tel"
               width="20"
               height="21"
               fill="#222"
@@ -176,7 +176,7 @@
             </svg>
           </div>
         </fieldset>
-        <fieldset class="form-main__field field field__comment">
+        <fieldset class="form-main__field field field--comment">
           <legend class="field__title field__title--comment">
             <h4 class="field__title-comment">Комментарий</h4>
           </legend>
@@ -188,7 +188,7 @@
             rows="5"
           ></textarea>
         </fieldset>
-        <fieldset class="form-main__field field field__additionally">
+        <fieldset class="form-main__field field field--additionally">
           <legend class="field__title field__title--additionally">
             <h4 class="field__title-additionally">Дополнительно</h4>
           </legend>
@@ -248,16 +248,20 @@
         <p class="form-main__remark">* — Обязательные поля</p>
       </form>
     </main>
-    <footer class="page-footer page-footer__form">
-      <section class="page-footer__contacts contacts contacts__page-form">
-        <h2 class="visually-hidden">А вот как можно нас найти</h2>
-        <h3 class="contacts__title">
-          Приглашаем<br />к сотрудничеству дилеров!
-        </h3>
-        <p class="contacts__adress">
-          ул. Большая Конюшенная, д. 19/8
-          <span class="contacts__adress--city">Санкт-Петербург</span>
-        </p>
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
+        <div class="contacts__page-form">
+          <h2 class="visually-hidden">А вот как можно нас найти</h2>
+          <h3 class="contacts__title">
+            Приглашаем<br />к сотрудничеству дилеров!
+          </h3>
+          <p class="contacts__adress">
+            ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__adress contacts__adress--city"
+              >Санкт-Петербург</span
+            >
+          </p>
+        </div>
       </section>
       <div class="page-footer__interactive-map">
         <h3 class="visually-hidden">Мы на карте</h3>

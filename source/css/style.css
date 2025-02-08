@@ -1518,34 +1518,34 @@
     padding-left: 110px;
   }
 }
-.field__basic-data {
+.field--basic-data {
   border-bottom: 1px solid #d9d9d9;
   padding: 0 0 10px 0;
 }
 @media (min-width: 768px) {
-  .field__basic-data {
+  .field--basic-data {
     border: none;
   }
 }
 @media (min-width: 1440px) {
-  .field__basic-data {
+  .field--basic-data {
     flex-grow: 1;
     width: 50%;
   }
 }
-.field__target-data {
+.field--target-data {
   padding-top: 25px;
   padding-bottom: 7px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
 }
 @media (min-width: 768px) {
-  .field__target-data {
+  .field--target-data {
     border: none;
   }
 }
 @media (min-width: 1440px) {
-  .field__target-data {
+  .field--target-data {
     padding: 0;
     padding-right: 110px;
     flex-grow: 1;
@@ -1585,20 +1585,20 @@
     margin-bottom: 23px;
   }
 }
-.field__contact-data {
+.field--contact-data {
   margin: 0;
   padding-right: 0;
 }
 @media (min-width: 1440px) {
-  .field__contact-data {
+  .field--contact-data {
     flex-direction: row;
   }
 }
-.field__comment {
+.field--comment {
   margin: 0;
   padding-right: 0;
 }
-.field__additionally {
+.field--additionally {
   margin: 0;
   padding-right: 0;
 }
@@ -1647,32 +1647,32 @@
     min-width: 451px;
   }
 }
-.field__input--icon {
+.field__icon {
   position: absolute;
   margin-top: 15px;
   right: 34px;
 }
 @media (min-width: 768px) {
-  .field__input--icon {
+  .field__icon {
     right: 85px;
   }
 }
 @media (min-width: 1440px) {
-  .field__input--icon {
+  .field__icon {
     position: relative;
     right: 45px;
   }
 }
 @media (min-width: 1440px) {
-  .field__input--icon-tel {
+  .field__icon--tel {
     right: 114px;
   }
 }
-.field__input--email:focus + .field__input--icon,
-.field__input--email:focus + .field__input--icon {
+.field__input--email:focus + .field__icon,
+.field__input--email:focus + .field__icon {
   stroke: #68b738;
 }
-.field__input--tel:focus + .field__input--icon {
+.field__input--tel:focus + .field__icon {
   fill: #68b738;
   stroke: #68b738;
 }
@@ -2076,24 +2076,24 @@
     margin-bottom: 14px;
   }
 }
-.product-card__show-more {
+.product-card--show-more {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
 }
 @media (min-width: 768px) {
-  .product-card__show-more {
+  .product-card--show-more {
     outline: 2px solid #f2f2f2;
     margin-top: 113px;
   }
 }
 @media (min-width: 1440px) {
-  .product-card__show-more {
+  .product-card--show-more {
     margin: 0;
     outline: none;
   }
-  .product-card__show-more::before {
+  .product-card--show-more::before {
     background-color: transparent;
     border: 2px solid #f2f2f2;
     z-index: 0;

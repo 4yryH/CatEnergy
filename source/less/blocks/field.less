@@ -165,7 +165,7 @@
   }
 }
 
-.field__basic-data {
+.field--basic-data {
   border-bottom: 1px solid @special-grey-line;
   padding: 0 0 10px 0;
   @media (min-width: @tablet-width) {
@@ -177,7 +177,7 @@
   }
 }
 
-.field__target-data {
+.field--target-data {
   padding-top: 25px;
   padding-bottom: 7px;
   border: none;
@@ -223,7 +223,7 @@
   }
 }
 
-.field__contact-data {
+.field--contact-data {
   margin: 0;
   padding-right: 0;
   @media (min-width: @desktop-width) {
@@ -231,12 +231,12 @@
   }
 }
 
-.field__comment {
+.field--comment {
   margin: 0;
   padding-right: 0;
 }
 
-.field__additionally {
+.field--additionally {
   margin: 0;
   padding-right: 0;
 }
@@ -285,7 +285,7 @@
   }
 }
 
-.field__input--icon {
+.field__icon {
   position: absolute;
   margin-top: 15px;
   right: 34px;
@@ -298,21 +298,21 @@
   }
 }
 
-.field__input--icon-tel {
+.field__icon--tel {
   @media (min-width: @desktop-width) {
     right: 114px;
   }
 }
 
 .field__input--email {
-  &:focus + .field__input--icon,
-  &:focus + .field__input--icon {
+  &:focus + .field__icon,
+  &:focus + .field__icon {
     stroke: @basic-green;
   }
 }
 
 .field__input--tel {
-  &:focus + .field__input--icon {
+  &:focus + .field__icon {
     fill: @basic-green;
     stroke: @basic-green;
   }
